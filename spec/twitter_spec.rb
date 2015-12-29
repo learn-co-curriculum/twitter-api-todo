@@ -20,7 +20,7 @@ describe TwitterApi do
       VCR.use_cassette('twitter/find_user_for') do
         user = client.find_user_for("sm_debenedetto")
         expect(user.class).to eq(Twitter::User)
-        expect(user.username).to eq("sm_debenedetto")
+        expect(user.screen_name).to eq("sm_debenedetto")
       end
     end
   end
